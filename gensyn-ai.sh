@@ -134,7 +134,7 @@ EOL
 
 # 查看Rl Swarm日志函数
 function view_rl_swarm_logs() {
-    cd /root/rl-swarm && docker-compose logs -f swarm_node
+    cd /root/rl-swarm && docker compose logs -f swarm_node
 
     # 提示用户按任意键返回主菜单
     read -n 1 -s -r -p "按任意键返回主菜单..."
@@ -143,7 +143,7 @@ function view_rl_swarm_logs() {
 
 # 查看Web UI日志函数
 function view_web_ui_logs() {
-    cd /root/rl-swarm && docker-compose logs -f fastapi
+    cd /root/rl-swarm && docker compose logs -f fastapi
 
     # 提示用户按任意键返回主菜单
     read -n 1 -s -r -p "按任意键返回主菜单..."
@@ -152,7 +152,7 @@ function view_web_ui_logs() {
 
 # 查看Telemetry日志函数
 function view_telemetry_logs() {
-    cd /root/rl-swarm && docker-compose logs -f otel-collector
+    cd /root/rl-swarm && docker compose logs -f otel-collector
 
     # 提示用户按任意键返回主菜单
     read -n 1 -s -r -p "按任意键返回主菜单..."
