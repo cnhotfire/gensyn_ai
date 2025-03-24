@@ -128,8 +128,8 @@ services:
 EOL
     fi
 
-    # 执行 docker compose up --build -d 并显示日志
-    docker compose up --build -d && docker compose logs -f
+    # 执行 docker compose up --build -d 
+    docker compose up --build -d 
 }
 
 # 查看Rl Swarm日志函数
