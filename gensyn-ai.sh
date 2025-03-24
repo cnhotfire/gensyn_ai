@@ -9,18 +9,18 @@ function install_gensyn_ai_node() {
     sudo apt-get update && sudo apt-get upgrade -y
 
     # 安装指定的软件包
-    sudo apt install -y curl iptables build-essential git wget lz4 jq make gcc nano automake autoconf tmux htop nvme-cli libgbm1 pkg-config libssl-dev libleveldb-dev tar clang bsdmainutils ncdu unzip libleveldb-dev python3 python3-pip
+    sudo apt install -y curl iptables build-essentiallz4 jq make gcc nano automake autoconf htop libgbm1 pkg-config libssl-dev libleveldb-dev tar clang bsdmainutils ncdu unzip libleveldb-dev
 
     # 检测 Docker 是否安装
     if ! command -v docker &> /dev/null
     then
         echo "Docker 未安装，正在安装 Docker..."
         # 安装 Docker
-        sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
+        sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
         curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
         sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-        sudo apt-get update
-        sudo apt-get install -y docker-ce
+        sudo apt update
+        sudo apt install -y docker-ce
         echo "Docker 安装完成"
     else
         echo "Docker 已安装"
